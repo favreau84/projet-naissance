@@ -10,12 +10,17 @@ export default function Preview() {
   return (
     <div className={`${styles.wrapper} fade-in`}>
       <header className={styles.head}>
-        <button type="button" className="btn-ghost" onClick={() => navigate(-1)}>
-          ← Modifier mes réponses
+        <button
+          type="button"
+          className={styles.backBtn}
+          onClick={() => navigate(-1)}
+          aria-label="Revenir au parcours"
+        >
+          <span aria-hidden>←</span> Retour au parcours
         </button>
         <h2 className={styles.title}>Votre projet de naissance</h2>
         <p className={styles.subtitle}>
-          Relisez votre projet. Vous pouvez revenir en arrière pour ajuster vos réponses.
+          Relisez votre projet. Vous pouvez revenir sur chaque étape pour ajuster vos réponses.
         </p>
       </header>
 

@@ -39,6 +39,11 @@ export default function StepsOverview({ open, onClose, currentIndex }) {
     navigate(`/journey/${index}`);
   };
 
+  const goToPreview = () => {
+    onClose();
+    navigate('/preview');
+  };
+
   return (
     <div className={styles.overlay} onClick={onClose} role="dialog" aria-modal="true">
       <aside
@@ -81,6 +86,12 @@ export default function StepsOverview({ open, onClose, currentIndex }) {
             );
           })}
         </ol>
+
+        <div className={styles.footer}>
+          <button type="button" className="btn btn-primary" onClick={goToPreview}>
+            Voir mon projet
+          </button>
+        </div>
       </aside>
     </div>
   );
