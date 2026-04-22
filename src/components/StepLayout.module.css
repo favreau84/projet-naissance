@@ -18,6 +18,30 @@
   background: linear-gradient(180deg, rgba(245, 240, 250, 0.95) 0%, rgba(245, 240, 250, 0.5) 100%);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.menuButton {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 140ms ease, box-shadow 140ms ease;
+}
+
+.menuButton:hover,
+.menuButton[aria-expanded='true'] {
+  background: var(--accent-pale);
+  box-shadow: var(--shadow-sm);
 }
 
 .main {

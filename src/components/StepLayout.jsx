@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import ProgressBar from './ProgressBar.jsx';
+import StepsOverview from './StepsOverview.jsx';
 import styles from './StepLayout.module.css';
 
 export default function StepLayout({
@@ -10,11 +12,22 @@ export default function StepLayout({
   nextDisabled = false,
   backLabel = 'Précédent'
 }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className={styles.layout}>
       {progress && (
         <header className={styles.header}>
           <ProgressBar current={progress.current} total={progress.total} />
+          <button
+            type="button"
+            className={styles.menuButton}
+            onClick={() => setMenuOpen(true)}
+            aria-label="Voir le sommaire du parcours"
+            aria-expanded={menuOpen}
+          >
+            <span aria-hidden>☰</span>
+          </button>
         </header>
       )}
 
@@ -37,6 +50,12 @@ export default function StepLayout({
           </button>
         )}
       </footer>
+
+      <StepsOverview
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        currentIndex={progress ? progress.current - 1 : 0}
+      />
     </div>
   );
 }
