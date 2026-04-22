@@ -1,0 +1,41 @@
+:root {
+  /* Palette lavande — rassurante et élégante */
+  --bg-primary: #f5f0fa;
+  --bg-gradient: linear-gradient(180deg, #efe6f8 0%, #f5f0fa 40%, #faf6fd 100%);
+  --surface: #ffffff;
+  --surface-soft: #faf5fe;
+  --accent: #6b4e8c;
+  --accent-hover: #55407a;
+  --accent-soft: #b9a3d4;
+  --accent-pale: #e5dcf1;
+  --text: #2a1f3d;
+  --text-muted: #6f6585;
+  --border: #e8dff3;
+  --success: #7bae91;
+  --danger: #c97c8a;
+
+  /* Typo */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Fraunces', 'Georgia', serif;
+
+  /* Échelle */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 2px 8px rgba(107, 78, 140, 0.08);
+  --shadow-md: 0 6px 20px rgba(107, 78, 140, 0.12);
+  --shadow-lg: 0 12px 32px rgba(107, 78, 140, 0.16);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --container-max: 520px; /* mobile-first : largeur max confortable */
+}
